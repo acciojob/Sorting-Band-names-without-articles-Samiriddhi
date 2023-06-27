@@ -1,41 +1,19 @@
-//your code here
-
- let touristSpots = ['The Virupaksha Temple', 'Victoria Memorial', 'Tajmahal'];
-
-touristSpots.sort();
-console.log(touristSpots);
-
-for(int I=0;i<arr.length;i++)s  += arr[I] + ' ';
-
-var arr = [....];
-
-
-var new_arr = [];
-for(int i=0;i<arr.length;i++){
-    string st = arr[i];
-    var x = st.split(' ');
-    string emp = "";
-    for(int j=0;j<x.length;j++){
-        if(x[j]=='the' || a || an)continue;
-        else {
-            emp += x[j] + ' ';
-        }
-    }
-    new_arr.push(emp);
+let bandNames=['The Virupaksha Temple', 'Victoria Memorial', 'Tajmahal']
+let articles=['A','AN','THE']
+bandNames.sort((a,b)=> (strip(a)>strip(b))? 1: -1)
+const ref= document.getElementsByTagName("ul")[0]
+for(let i=0;i<bandNames.length;i++){
+	const li = document.createElement("li") 
+	li.innerText= bandNames[i]
+	ref.append(li)
 }
-
-//mapping 
-new_arr ==> arr
-v temple ==> the v temple
-
-
-new_arr.sort(); 
-
-for(int i=0;i<new_arr.length;i++){
-    string s = new_arr[i]; //v temple
-    string updated = mp[s];
-    new_arr[i] = updated; //the v temple
+function strip(word){
+	let arr= word.split(" ")
+	let s=""
+	for(let i=0;i<arr.length;i++){
+		if(articles.indexOf(arr[i].toUpperCase())=== -1){
+			s=s+arr[i]
+		}
+	}
+	return s.trim()
 }
-
-
-return new_arr;
